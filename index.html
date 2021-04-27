@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<head>
+<title>lalalalalala</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+   button { background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+a { text-decoration: none; color: black;}
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+  body {
+    font-family: 'Inter', sans-serif;
+    overflow-y: hidden;
+  }
+.absurd {font-size: 4vh;}
+
+p { font-size: 3vh; }
+
+.arrow {
+  width: 70vw;
+}
+
+.parent {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 2 / 3 / 6; }
+.div2 { grid-area: 3 / 2 / 4 / 4; }
+
+	#flip{
+  width: 80%;
+  }
+
+  /* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 70vw;
+  
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  
+  
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+</style>
+
+<script>
+	var images = [
+  "01.png",
+  "02.png",
+  "03.png",
+  "04.png",
+  "05.png",
+  "06.png",
+  "07.png",
+  "08.png",
+  "09.png",
+  "10.png",
+  "11.png",
+  "12.png",
+  "13.png",
+  "14.png",
+  "15.png",
+  "16.png",
+  "17.png",
+  "18.png",
+  "19.png",
+  "20.png",
+  "21.png",
+  "22.png",
+  "23.png",
+  "24.png",
+  "25.png",
+  "26.png"
+  ]
+var current = 0;
+setInterval(function(){
+			
+  $('#flip').attr('src', images[current]);
+  current = (current < images.length - 1)? current + 1: 0;
+
+},650); /*1000 = 1 sec*/
+	</script>
+</head>
+<body>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="parent">
+<div class="div1"> 
+<img id="flip" src=""> 
+</div>
+<div class="div2"> 
+<div class="absurd">Absurd Reality</div>
+<div class="popup" onclick="myFunction()">How did we get here?
+  <span class="popuptext" id="myPopup"><img class="arrow" src="concerning.png"></span>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script> <br> <button type="button" onclick="alert('Most of American politicians, media and educational system are just designing society to be cogs in the machine. Pandemic really exposed the ulterior motives of capitalism- not surprising. Advancing technology without considering the unintended consequences is detrimental. Elon Musk developing a whole brain interface? I feel like the downfall of America is amongst us. America is shit show.')">Why did I make this?</button> <br> <a href="https://docs.google.com/document/d/100hA1i6CKuI_5RjOFyastpKbEvy8fmb0M2OmRLCrzGw/edit?usp=sharing" target=_blank>Resources</a>
+</div>
+</div>
+
+
+</body>
+</html>
